@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaSpinner, FaStar } from "react-icons/fa";
 import { ProductsContext } from "./../../context/ProductsContext";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function Product() {
   const { id } = useParams();
@@ -101,11 +101,14 @@ export default function Product() {
           </p>
           <div className="pt-4">
             <button
-              className="p-2 rounded-lg bg-teal-600 text-white hover:bg-teal-700 transition"
-              onClick={() => addProduct(product)}
+              className="p-2 cursor-pointer rounded-lg bg-teal-600 text-white hover:bg-teal-700 transition"
+              onClick={() => {
+                addProduct(product);
+              }}
             >
               Add to Cart
             </button>
+
             <Link
               to="/cart"
               className="p-2 rounded-lg bg-teal-600 text-white hover:bg-teal-700 ms-2"
@@ -121,6 +124,11 @@ export default function Product() {
   return (
     <div className="flex justify-center items-center my-7 pt-24 pb-24">
       {isLoading || productLoading ? <Loading /> : <ShowProduct />}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+      />
     </div>
   );
 }

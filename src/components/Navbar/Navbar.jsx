@@ -13,7 +13,7 @@ export default function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="bg-gray-800 fixed top-0 left-0 right-0 z-50 shadow-lg dark:bg-gray-300 dark:text-gray-800">
+    <nav className="bg-gray-800 fixed top-0 left-0 right-0 z-50 shadow-lg ">
       <div className="container mx-auto w-[97%] md:w-[80%] flex justify-between items-center py-4">
         <Link
           to="/"

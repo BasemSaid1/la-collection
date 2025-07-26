@@ -12,7 +12,7 @@ It provides a smooth and simple shopping experience that includes:
 
 ---
 
-> 🔗 **Live Demo:** (Coming soon or add your Vercel/Netlify link here)
+> 🔗 **Live Demo:** (https://la-collection-five.vercel.app/)
 
 ---
 
